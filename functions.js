@@ -53,23 +53,20 @@ let digital_root = function (number) {
 let findPairs = function (arr) {
   const targetNumberr = 5
 
-  let pairsCollection = {}
+  let pairs = 0
 
   arr.forEach(function (element, index) {
     for (let i = index + 1; i < arr.length; i++) {
-      if (element + arr[i] === targetNumberr) pairsCollection[element] = arr[i]
+      if (element + arr[i] === targetNumberr) pairs++
     }
   })
 
-  for (k in pairsCollection)
-    console.log(`Pairs are: ${k} and ${pairsCollection[k]}`)
-
-  return pairsCollection
+  return pairs
 }
 
-// findPairs([1, 3, 6, 2, 2, 0, 4, 5])
-// findPairs([3, 2, 1, 6, 4, 0, 2, 2])
-// findPairs([4, 3, 0, 5, 2, 3, 4, 1])
+// console.log(findPairs([1, 3, 6, 2, 2, 0, 4, 5]))
+// console.log(findPairs([3, 2, 1, 6, 4, 0, 2, 2]))
+// console.log(findPairs([4, 3, 0, 5, 2, 3, 4, 1]))
 
 //FORM INVITATION---------------------------------------------------------------
 
