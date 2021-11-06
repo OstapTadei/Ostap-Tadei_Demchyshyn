@@ -11,21 +11,16 @@ var filter_list = function (array) {
 // FIRST NON-REPEATING LETTER--------------------------------------------
 
 var first_non_repeating_letter = function (str) {
-  let letterCollection = {}
-
-  str.match(/\S/g).forEach(function (element) {
-    letterCollection[element] = (letterCollection[element] || 0) + 1
-  })
-  for (key in letterCollection) {
-    if (letterCollection[key] === 1) {
-      return key
-    }
+  for (let i = 0; i < str.length; i++) {
+    let amount = str.match(new RegExp(str[i], 'gi')).length
+    if (amount === 1) return str[i]
   }
+  return Error('The string is empty')
 }
 
 // console.log(first_non_repeating_letter('stress'))
 // console.log(first_non_repeating_letter('sTreSs'))
-// console.log(first_non_repeating_letter('ccooLlaboration'))
+// console.log(first_non_repeating_letter('cCooLlaboration'))
 
 //DIGITAL ROOT-----------------------------------------------------------
 
