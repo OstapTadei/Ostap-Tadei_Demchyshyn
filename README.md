@@ -1,8 +1,8 @@
 # Ostap-Tadei_Demchyshyn
 
-* To run this this test node.js and npm (or yarn) has to be installed
+* To run this this test Node.js and npm (or yarn) has to be installed
   * Download from https://nodejs.org/uk/ and install
-* Open test.js in any IDE
+* Open test.js in IDE supporting JS and Node.js
 * Selenium and Selenium WebDriver has to be installed
   * You can you use npm or yarn
   * for npm 
